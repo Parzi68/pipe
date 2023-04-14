@@ -34,7 +34,7 @@ pipeline {
             
             steps {
                 script{
-                    echo 'building the application'
+                    echo 'building the application hello jay'
                     echo "Software version is ${NEW_VERSION}"
                     sh 'mvn build-helper:parse-version versions:set -DnewVersion=\\\${parsedVersion.majorVersion}.\\\${parsedVersion.nextMinorVersion}.\\\${parsedVersion.incrementalVersion}\\\${parsedVersion.qualifier?}' 
                     sh 'mvn clean package'
@@ -85,7 +85,7 @@ pipeline {
 //                         sh 'git branch'
 //                         sh 'git config --list'
 
-//                         sh "git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/2023123456789/springboot-jenkins.git"
+//                         sh "git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/learnwithparth/springboot-jenkins.git"
 //                         sh 'git add .'
 //                         sh 'git commit -m "version change"'
 //                         sh 'git push origin HEAD:jenkins-jobs'
